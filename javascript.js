@@ -3,15 +3,15 @@ function computerChoice(){
     let randomChoice=Math.floor(Math.random()*choice.length);
     return choice[randomChoice];
 }
-console.log(computerChoice());
-function showResult(massage,computerSelection,playerSelection,computerScore=0,playerScore=0){
+//console.log(computerChoice());
+function showResult(massage,computerSelection,playerSelection,computerScore,playerScore){
     console.log (`${massage}\nComputer :${computerSelection}  You: ${playerSelection}\n`);
     console.log(`Computer Score : ${computerScore}\nYour Score : ${playerScore}`);
 
 }
 function playRound(computerSelection,playerSelection){
-    let playerScore;
-    let computerScore;
+   // console.log (`Computer :${computerSelection}  You: ${playerSelection}\n`);
+    
     if(computerSelection===playerSelection){
         showResult("it is a tie",computerSelection,playerSelection,computerScore,playerScore);
     }
@@ -57,8 +57,22 @@ function playRound(computerSelection,playerSelection){
   
 
 }
-let playerChoice=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
-playRound(computerChoice(),playerChoice);
+
+function game(){
+    for(let i=0;i<5;i++){
+       let playerSelection=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
+       const computerSelection=computerChoice();
+       playRound(computerSelection,playerSelection);
+
+    }
+    console.log("Game Over");
+}
+let playerScore=0;
+let computerScore=0;
+// let playerSelection=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
+// const computerSelection=computerChoice();
+
+// playRound(computerSelection,playerSelection);
 
 
-
+game();
