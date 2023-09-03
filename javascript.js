@@ -75,4 +75,4 @@ let computerScore=0;
 // playRound(computerSelection,playerSelection);
 
 
-game();
+//game();

@@ -1,0 +1,26 @@
+header{
+    text-align: center;
+    height: 50px;
+    width: auto;
+}
+.container{
+    display: flex;
+   
+}
+.images{
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+}
+.side{
+    display: flex;
+    flex: 1 1 0;
+    margin: 20px;
+    
+
+}
+img{
+    height: 100px;
+    width: 100px;
+}
