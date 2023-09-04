@@ -8,7 +8,7 @@ header{
    
 }
 
-.side{
+.interContainer{
     
     display: flex;
     flex-direction: column;
