@@ -69,6 +69,41 @@ function game(){
 }
 let playerScore=0;
 let computerScore=0;
+const playerselections=document.querySelectorAll(".selection");
+console.log(playerselections);
+playerselections.forEach(selection => { selection.addEventListener("click", function (e){
+    
+    if(selection.classList.contains ("paper"))
+    {
+        console.log("paper");
+        playRound(computerChoice(),"Paper");
+       return "Paper";}
+   else if(selection.classList.contains("rock"))
+    {
+        console.log("Rock");
+        playRound(computerChoice(),"Rock");
+        return "Rock";}
+   else if(selection.classList.contains("scissors"))
+   {
+    console.log("Scissors");
+    playRound(computerChoice(),"Scissors");
+    return "Scissors"}
+   else{
+    console.log("no match");
+   }
+   console.log(selection);
+});
+    
+});
+//playerselections.forEach(selction) => Selction.addEventListener("onclick",)
+    // if(selction.classList==="Paper")
+    //  {
+    //     return "Paper";}
+    // else if(selction.classList==="Rock")
+    //  {return "Rock";}
+    // else if(selction.classList==="scissors")
+    // {return "Paper"}
+//    console.log(selction);
 // let playerSelection=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
 // const computerSelection=computerChoice();
 
