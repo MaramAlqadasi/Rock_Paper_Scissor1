@@ -34,8 +34,8 @@ img{
     border-radius: 10px;
 
 }
-img:hover{
-    background-color: rgb(158, 107, 107) ;
+.selection:hover{
+    background-color:rgb(216 212 135);
     cursor: pointer;
 }
 

@@ -1,6 +1,12 @@
 function computerChoice(){
     const choice=["Rock","Paper","Scissors"];
     let randomChoice=Math.floor(Math.random()*choice.length);
+    const current_selection =document.querySelector(`.${choice[randomChoice]}`);
+    current_selection.style="background-color:rgb(216 212 135);"
+    setTimeout(() => {
+        current_selection.style="background-color:white;"
+    }, 1000);
+    
     return choice[randomChoice];
 }
 //console.log(computerChoice());
@@ -58,15 +64,15 @@ function playRound(computerSelection,playerSelection){
 
 }
 
-function game(){
-    for(let i=0;i<5;i++){
-       let playerSelection=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
-       const computerSelection=computerChoice();
-       playRound(computerSelection,playerSelection);
+// function game(){
+//     for(let i=0;i<5;i++){
+//        let playerSelection=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
+//        const computerSelection=computerChoice();
+//        playRound(computerSelection,playerSelection);
 
-    }
-    console.log("Game Over");
-}
+//     }
+//     console.log("Game Over");
+// }
 let playerScore=0;
 let computerScore=0;
 const playerselections=document.querySelectorAll(".selection");
