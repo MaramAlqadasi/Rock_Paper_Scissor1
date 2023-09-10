@@ -11,6 +11,7 @@ header{
     height: fit-content;
     width: 9rem;
     border: 0.5rem solid brown;
+    border-radius: 10px;
     position: relative;
     color: brown;
     display: flex;
