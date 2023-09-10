@@ -11,6 +11,12 @@ function computerChoice(){
 }
 //console.log(computerChoice());
 function showResult(massage,computerSelection,playerSelection,computerScore,playerScore){
+    const computerScoreElement=document.querySelector(".computer");
+    const playerScoreElement=document.querySelector(".player");
+    computerScoreElement.textContent=computerScore;
+    playerScoreElement.textContent=playerScore;
+  
+
     console.log (`${massage}\nComputer :${computerSelection}  You: ${playerSelection}\n`);
     console.log(`Computer Score : ${computerScore}\nYour Score : ${playerScore}`);
 
