@@ -2,7 +2,7 @@ function computerChoice(){
     const choice=["Rock","Paper","Scissors"];
     let randomChoice=Math.floor(Math.random()*choice.length);
     const current_selection =document.querySelector(`.${choice[randomChoice]}`);
-    current_selection.style="background-color:rgb(216 212 135);"
+    current_selection.style="scale:1.1;background-color:rgb(190 46 46);"
     setTimeout(() => {
         current_selection.style="background-color:white;"
     }, 1000);
