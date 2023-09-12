@@ -70,13 +70,37 @@ header{
     
 
 }
+.resultMassageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .resultMassage{
     font-size: larger;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
     font-weight: bold;
 }
+.playAgain{
+    text-align: center;
+    padding: 10px 40px;
+    background-color: white;
+    color: brown;
+    box-shadow: brown 11px 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    margin: 0px auto;
+    display: none;
+    
+    
+
+}
+
 .selectionTitle{
     text-align: center;
 }

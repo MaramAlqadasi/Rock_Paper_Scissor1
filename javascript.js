@@ -1,3 +1,4 @@
+const playAgainbutton=document.querySelector(".playAgain");
 function computerChoice(){
     const choice=["Rock","Paper","Scissors"];
     let randomChoice=Math.floor(Math.random()*choice.length);
@@ -10,20 +11,39 @@ function computerChoice(){
     return choice[randomChoice];
 }
 //console.log(computerChoice());
-// function playAgain({
+ function playAgain(){
+    console.log("kkkkkkkkkkk");
+    location.reload();
 
-// })
+ }
+
+ 
 function showResult(massage,computerSelection,playerSelection,computerScore,playerScore){
     const computerScoreElement=document.querySelector(".computer");
     const playerScoreElement=document.querySelector(".player");
     const resultMassage=document.querySelector(".resultMassage");
+    
+   
+    if(computerScore==5){
+        massage+=" \n"+"  You Wins";
+        playAgainbutton.style="display:block";
+        mainContainer.style="display:none";
+        
+    }
+    else if(playerScore==5){
+        massage+=" \n "+"Computer Wins";
+        playAgainbutton.style="display:block";
+        mainContainer.style="display:none";
+        
+    }
     computerScoreElement.textContent=computerScore;
     playerScoreElement.textContent=playerScore;
     resultMassage.textContent=massage;
+   
   
 
-    console.log (`${massage}\nComputer :${computerSelection}  You: ${playerSelection}\n`);
-    console.log(`Computer Score : ${computerScore}\nYour Score : ${playerScore}`);
+    // console.log (`${massage}\nComputer :${computerSelection}  You: ${playerSelection}\n`);
+    // console.log(`Computer Score : ${computerScore}\nYour Score : ${playerScore}`);
 
 }
 function playRound(computerSelection,playerSelection){
@@ -78,19 +98,14 @@ function playRound(computerSelection,playerSelection){
 
 }
 
-// function game(){
-//     for(let i=0;i<5;i++){
-//        let playerSelection=prompt("Enter your choice please( Rock,Scissors,or Paper): ");
-//        const computerSelection=computerChoice();
-//        playRound(computerSelection,playerSelection);
 
-//     }
-//     console.log("Game Over");
-// }
+
 let playerScore=0;
 let computerScore=0;
 const playerselections=document.querySelectorAll(".selection");
-console.log(playerselections);
+const mainContainer= document.querySelector(".container");
+playAgainbutton.addEventListener("click",playAgain);
+// console.log(playerselections);
 playerselections.forEach(selection => { selection.addEventListener("click", function (e){
     
     if(selection.classList.contains ("paper"))
