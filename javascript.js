@@ -10,6 +10,9 @@ function computerChoice(){
     return choice[randomChoice];
 }
 //console.log(computerChoice());
+// function playAgain({
+
+// })
 function showResult(massage,computerSelection,playerSelection,computerScore,playerScore){
     const computerScoreElement=document.querySelector(".computer");
     const playerScoreElement=document.querySelector(".player");
@@ -54,14 +57,17 @@ function playRound(computerSelection,playerSelection){
     else if (computerSelection==="Scissors"){
         if(playerSelection==="Rock"){
             playerScore+=1;
-            console.log ("You have a point " + " "+`Computer :${computerSelection}+ " "+ You: ${playerSelection}`);
-            console.log(`Computer Score : ${computerScore} + "  " + Your Score : ${playerScore}`);
+            // console.log (`You have a point \nComputer :${computerSelection}  You: ${playerSelection}`);
+            // console.log(`Computer Score : ${computerScore}    Your Score : ${playerScore}`);
+            showResult("You have a point " ,computerSelection,playerSelection,computerScore,playerScore);
 
         }
         else{
             computerScore+=1;
-            console.log ("You have a point " + " "+`Computer :${computerSelection}+ " "+ You: ${playerSelection}`);
-            console.log(`Computer Score : ${computerScore} + "  " + Your Score : ${playerScore}`);
+            // console.log (`You have a point \nComputer : ${computerSelection}   You: ${playerSelection}`);
+            // console.log(`Computer Score : ${computerScore}    Your Score : ${playerScore}`);
+            showResult("Computer have a point " ,computerSelection,playerSelection,computerScore,playerScore);
+            
 
         }
         
