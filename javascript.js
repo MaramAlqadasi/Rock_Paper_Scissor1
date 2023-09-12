@@ -110,23 +110,19 @@ playerselections.forEach(selection => { selection.addEventListener("click", func
     
     if(selection.classList.contains ("paper"))
     {
-        console.log("paper");
+        //console.log("paper");
         playRound(computerChoice(),"Paper");
        return "Paper";}
    else if(selection.classList.contains("rock"))
     {
-        console.log("Rock");
+        //console.log("Rock");
         playRound(computerChoice(),"Rock");
         return "Rock";}
    else if(selection.classList.contains("scissors"))
    {
-    console.log("Scissors");
+   // console.log("Scissors");
     playRound(computerChoice(),"Scissors");
     return "Scissors"}
-   else{
-    console.log("no match");
-   }
-   console.log(selection);
 });
     
 });
