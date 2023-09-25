@@ -123,8 +123,14 @@ img{
     scale: 1.1;
 }
 
-footer{
+.footer{
     text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+.footer a{
+  text-decoration: none;
+  color:brown;
 }
 @media screen and (max-width:992px){
     .container{
