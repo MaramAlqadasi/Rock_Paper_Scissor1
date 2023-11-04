@@ -139,3 +139,17 @@ img{
     }
     
 }
+@media screen and (max-width:530px) {
+    img{
+        height: 100px;
+        width:100px;
+      
+    }
+    .computerLabel,.playerLabel{
+        font-size: small;
+    }
+    .playerLabel{
+       left: -20px;
+    }
+    
+}
